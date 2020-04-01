@@ -1,0 +1,61 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: "Nunito", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+
+// Custom font sizes
+$font-size-8: 8px;
+$font-size-10: 10px;
+$font-size-12: 12px;
+$font-size-13: 13px;
+$font-size-14: 14px;
+$font-size-16: 16px;
+$font-size-17: 17px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-22: 22px;
+$font-size-24: 24px;
+$font-size-26: 26px;
+$font-size-28: 28px;
+$font-size-30: 30px;
+$font-size-32: 32px;
+$font-size-35: 35px;
+$font-size-40: 40px;
+$font-size-85: 85px;
+
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66D9b;
+$red: #e3342f;
+$text-red-500: rgba($red, .5);
+$text-red-800: rgba($red, .8);
+
+
+
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+
+// Borders
+$borderRadius4: 4px;
+$borderRadius5: 5px;
+$borderRadius7: 7px;
+
+// Shadows
+$boxShadow1: 0 2px 5px 0 rgba(0, 0, 0, .13), 0 2px 5px 0 rgba(0, 0, 0, .10);
+$shadowCardCarRental: 0 10px 50px rgba(71, 71, 71, .2);
+$shadowCardReviewCity: 0 10px 50px rgba(71, 71, 71, .1);
+$boxShadow3: 0 2px 8px rgba(173, 181, 189, .5);
+$shadowMapLabel: 0 20px 50px rgba($blue, .3);
+$boxShadowFavCities: 0 2px 5px 0 rgba(208, 207, 207, 0.13), 0 2px 5px 0 rgba(117, 117, 117, 0.1);
+$textShadowPoi: 2px 1px 5px rgba(0, 0, 0, 0.6);

@@ -1,0 +1,1584 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables.scss';
+// Responsive
+@import 'media-queries.scss';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap.scss';
+// Reset CSS
+@import '~reset-css';
+@import '~pure-react-carousel/dist/react-carousel.es.css';
+
+body {
+	font-family: $font-family-sans-serif !important;
+}
+
+#root {
+	height: 100%;
+}
+
+/* === COLORED TEXT === */
+.text-green-500 {
+	color: rgba($green, .5) !important
+}
+
+.text-green-900 {
+	color: rgba($green, .9) !important
+}
+
+.text-blue {
+	color: $blue;
+}
+
+.text-blue-500 {
+	color: rgba($blue, .5) !important
+}
+
+.text-blue-900 {
+	color: rgba($blue, .9) !important
+}
+
+.text-red-500 {
+	color: $text-red-500 !important;
+}
+
+.text-red-800 {
+	color: $text-red-800 !important;
+}
+
+.text-grey {
+	color: $gray-700 !important;
+}
+
+.muted-text {
+	color: rgba(0, 0, 0, .32);
+}
+
+/* === TYPOGRAPHY === */
+.italic {
+	font-style: italic
+}
+
+.underlined {
+	text-decoration: underline
+}
+
+.striked {
+	text-decoration: line-through
+}
+
+.text-centered {
+	text-align: center;
+	margin: auto;
+
+	/** Experimental **/
+	justify-content: center;
+}
+
+.text-left {
+	text-align: left
+}
+
+.text-right {
+	text-align: right
+}
+
+.pipe-right {
+	padding: 2px 5px;
+	border-right: 1px solid $gray-600;
+
+	&.smaller {
+		padding: 0 10px;
+		border-right: 1px solid $gray-400;
+	}
+
+	&.smaller:first-child {
+		padding-left: 0;
+	}
+
+	&:last-child {
+		padding-right: 0 !important;
+		border-right: none !important;
+	}
+}
+
+.padding-reset {
+	padding: 0 !important;
+}
+
+.padding5 {
+	padding: 5px;
+
+	&.b-radius {
+		border-radius: $borderRadius5;
+	}
+}
+
+.padding30 {
+	padding: 30px !important;
+}
+
+.flex-1 {
+	display: flex;
+	flex: 0 1 auto;
+}
+
+.flex-vertical {
+	display: flex;
+	flex-direction: column;
+}
+
+.width90 {
+	width: 90% !important;
+}
+
+.width100 {
+	width: 100% !important;
+}
+
+.bordered-grey {
+	border: 1px solid $gray-100;
+}
+
+/* ================== */
+/* === CUSTOM CSS === */
+/* ================== */
+
+img {
+	border-radius: $borderRadius4;
+}
+
+.container-row {
+	height: 90vh;
+	text-align: center;
+}
+
+.container-cell {
+	min-width: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-content: space-around;
+	/*height: 100vh;*/
+
+	.view-title, .btn-block {
+		margin: 8vh auto;
+	}
+}
+
+.button {
+	margin-top: 10px;
+	width: auto;
+}
+
+.circle-button {
+	margin: 0;
+	vertical-align: 2px !important;
+}
+
+.l-align-to-child {
+	display: flex !important;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.align-right {
+	display: flex !important;
+	justify-content: flex-end !important;
+}
+
+.city-prev-button-text {
+	margin-left: 15px;
+}
+
+.city-next-button-text {
+	margin-right: 15px;
+}
+
+/* FONTS
+   ============================= */
+.fs8 {
+	font-size: $font-size-8 !important
+}
+
+.fs10 {
+	font-size: $font-size-10 !important
+}
+
+.fs12 {
+	font-size: $font-size-12 !important
+}
+
+.fs13 {
+	font-size: $font-size-13 !important
+}
+
+.fs14 {
+	font-size: $font-size-14 !important
+}
+
+.fs16 {
+	font-size: $font-size-16 !important
+}
+
+.fs17 {
+	font-size: $font-size-17 !important
+}
+
+.fs18 {
+	font-size: $font-size-18 !important
+}
+
+.fs20 {
+	font-size: $font-size-20 !important
+}
+
+.fs22 {
+	font-size: $font-size-22 !important
+}
+
+.fs24 {
+	font-size: $font-size-24 !important
+}
+
+.fs26 {
+	font-size: $font-size-26 !important
+}
+
+.fs28 {
+	font-size: $font-size-28 !important
+}
+
+.fs30 {
+	font-size: $font-size-30 !important
+}
+
+.fs32 {
+	font-size: $font-size-32 !important
+}
+
+.fs35 {
+	font-size: $font-size-35 !important
+}
+
+.fs40 {
+	font-size: $font-size-40 !important
+}
+
+.fs85 {
+	font-size: $font-size-85 !important
+}
+
+/* === [ Margins start ] === */
+/* ========================= */
+
+/* === MARGINS RESET === */
+.mrgn-reset {
+	margin: 0 !important;
+}
+
+$step: 5;
+@for $i from 0 through 10 {
+	$margin: #{($i) * $step};
+
+	/* === TOP MARGINS === */
+	.mrgn-t-#{$margin} {
+		margin-top: #{$margin}px !important
+	}
+
+	/* === LEFT MARGINS === */
+	.mrgn-l-#{$margin} {
+		margin-left: #{$margin}px !important
+	}
+
+	/* === RIGHT MARGINS === */
+	.mrgn-r-#{$margin} {
+		margin-right: #{$margin}px !important
+	}
+
+	/* === BOTTOM MARGINS === */
+	.mrgn-b-#{$margin} {
+		margin-bottom: #{$margin}px !important
+	}
+}
+
+/* === TOP & BOTTOM MARGINS === */
+.mrgn-tb-5 {
+	margin-top: 5px !important;
+	margin-bottom: 5px !important;
+}
+
+.mrgn-tb-10 {
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
+}
+
+.mrgn-tb-20 {
+	margin-top: 20px !important;
+	margin-bottom: 20px !important;
+}
+
+/* ========================= */
+/* === [ Margins end ] === */
+
+.margin-lr-10 {
+	margin-left: 10px !important;
+	margin-right: 10px !important;
+}
+
+.vert-align-ctr, .vert-hor-align-ctr {
+	display: flex !important;
+	align-items: baseline;
+
+	&.precise {
+		align-items: center;
+	}
+}
+
+.vert-hor-align-ctr {
+	justify-content: center;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.shown, .flex {
+	display: flex !important;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.help-cursor {
+	cursor: help;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.view-title {
+	margin: 0 auto 6%;
+}
+
+.inline {
+	display: flex !important;
+	/*justify-content: flex-start !important;*/
+	align-items: center !important;
+	flex-direction: row !important;
+	flex-wrap: wrap !important;
+
+	&.centered {
+		justify-content: center;
+	}
+
+	&.right {
+		justify-content: end;
+	}
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.input {
+	width: 100%;
+}
+
+.min-width100 {
+	min-width: 100%;
+}
+
+.three-dots {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/* OVERRIDE ANT STYLES
+   ============================= */
+
+.ant-layout {
+	background-color: $white !important;
+}
+
+.ant-layout-sider-children {
+	overflow: auto;
+	border-right: 1px solid rgba($gray-500, .3);
+	padding-right: 20px;
+}
+
+.ant-card-body {
+	padding: 15px !important;
+}
+
+.ant-card-bordered {
+	border-radius: $borderRadius4;
+}
+
+.ant-cascader-menu {
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 300px !important;
+}
+
+.anticon {
+	vertical-align: inherit !important;
+}
+
+.ant-statistic-content-value-decimal {
+	font-size: inherit !important;
+}
+
+.sider-hotels {
+	.rate-grey-item {
+		.ant-rate {
+			color: #E8E8E8 !important;
+		}
+	}
+
+	.rate-grey-item {
+		.ant-rate-star {
+			color: #6C757D !important;
+		}
+	}
+}
+
+.ant-col-xs-24.ant-form-item-label {
+	padding: 0 !important;
+
+	label {
+		margin-bottom: 0;
+	}
+
+	.ant-form-item {
+		margin-bottom: 12px !important;
+	}
+}
+
+.ant-back-top-inner {
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	border-radius: 4px;
+	background-color: #1088e9;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+}
+
+.poi-drawer {
+	.ant-drawer-header {
+		/*position: absolute;
+		width: auto !important;
+		right: 16px;*/
+
+		position: absolute;
+		width: 100%;
+		background-color: #fff;
+		z-index: 3;
+		box-shadow: 0 2px 8px rgba(173, 181, 189, 0.5);
+		left: 0;
+		top: 0;
+	}
+
+	.poi-drawer-header {
+		position: fixed;
+		width: 39.1333%;
+		background-color: $white;
+		box-shadow: $boxShadow3;
+		top: 55px;
+		right: 16px;
+		padding: 16px 24px;
+		color: rgba(0, 0, 0, 0.65);
+		border-bottom: 1px solid #e8e8e8;
+		border-radius: 4px 4px 0 0;
+		font-size: 16px;
+		margin-top: -55px;
+		font-weight: bolder;
+	}
+
+	.ant-drawer-body {
+		z-index: 1 !important;
+		position: relative;
+		margin-top: 50px;
+	}
+}
+
+.ant-cascader-picker-label {
+	padding: 0 38px 0 12px;
+}
+
+.ant-popover-content {
+	max-width: 280px !important;
+}
+
+/* BREADCRUMB ICON VERTICAL ALIGN - FIX
+   ============================= */
+
+.ant-breadcrumb {
+	border-left: 1px solid rgba($gray-500, .3);
+	padding: 10px 0 10px 28px !important;
+
+	.anticon {
+		margin-right: 3px;
+		position: relative;
+		top: -1px;
+	}
+}
+
+.ant-tooltip-inner {
+	min-width: unset !important;
+}
+
+.ant-slider-handle {
+	width: 10px !important;
+	height: 10px !important;
+	margin-top: -3px !important;
+	margin-left: -3px !important
+}
+
+
+/* ============================= */
+
+.transport-block {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	span {
+		margin: auto 1px;
+		cursor: pointer;
+		width: 65px;
+		padding: 3px 6px;
+		transition: ease-in-out .2s;
+
+		&:hover {
+			background-color: rgba($blue, .05);
+			border-radius: $borderRadius4;
+		}
+
+		.transport-icon {
+			font-size: 17px;
+			color: #1890FF;
+		}
+
+		div {
+			line-height: 25px;
+		}
+	}
+
+	.hover-transport-span {
+		background-color: rgba($blue, .2);
+		border-radius: $borderRadius4;
+	}
+}
+
+.review-city-card {
+	background-color: rgba($blue, .02) !important;
+	margin: 5% 3% !important;
+	border-radius: $borderRadius4 !important;
+	box-shadow: $shadowCardReviewCity;
+
+	.big-city-text {
+		font-size: 230%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		color: rgba($blue, 1);
+		padding: 2vh 15px;
+	}
+
+	.transport-icon, .calendar-icon {
+		font-size: 17px;
+		color: #1890FF;
+		margin-right: 8px;
+		min-width: 20px;
+	}
+
+	div {
+		line-height: 30px;
+	}
+
+	.ant-card-meta-title {
+		margin-left: 22px;
+		text-transform: capitalize;
+	}
+}
+
+.header-row {
+	position: relative;
+	padding: 0 20px;
+	color: $blue;
+	display: flex;
+	align-items: center;
+	box-shadow: $boxShadow3;
+	z-index: 10;
+	background-color: $white;
+
+	/*.logo {
+	  font-size: 3vh;
+	}*/
+
+	.logo-img {
+		width: 165px;
+		height: 60px;
+		margin: 8px auto;
+	}
+
+	.account-block {
+		display: flex;
+		justify-content: flex-end;
+
+		.welcome, .my-account {
+			margin: 0 12px;
+			color: $gray-900;
+		}
+
+		.my-account {
+			color: rgba($blue, .8);
+			cursor: pointer;
+
+			.ant-dropdown-link {
+				align-items: center;
+				display: flex;
+
+				.anticon {
+					margin-left: 6px;
+				}
+			}
+		}
+
+		.my-account-icon {
+			font-size: $font-size-20;
+			margin: 0 5px;
+			color: rgba($blue, .8);
+		}
+	}
+}
+
+/*.affixed-row {
+  box-shadow: $boxShadow3;
+  background-color: $white;
+}*/
+
+.content-wrapper {
+	height: 91.3vh;
+	top: -4px;
+	position: relative;
+
+	#map {
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		/*margin: 4px 8px 0;*/
+		margin: 5px 0 0;
+		/*border: 1px solid rgba($blue, 0.22);*/
+
+		.icons-list {
+			display: inline-flex;
+		}
+
+		.google-map-label {
+			height: 56px;
+			border: 1px solid rgba($blue, .8);
+			border-radius: $borderRadius5;
+			background: rgba(#D3E8FF, .85);
+			text-align: left;
+			line-height: 22px;
+			font-weight: bold;
+			font-size: 17px;
+			color: $blue;
+			padding: 7px;
+			box-shadow: $shadowMapLabel;
+
+			.date-arrival {
+				font-size: 15px;
+				font-weight: normal;
+			}
+		}
+
+		.weather-icon {
+			font-size: 33px;
+			padding: 0 5px 0 10px;
+			margin-left: 15px;
+			border-left: 1px dotted $blue;
+			line-height: 34px;
+		}
+
+		.weather-temp {
+			font-size: 15px;
+			font-weight: normal;
+			line-height: 40px;
+			margin-left: 5px;
+		}
+	}
+}
+
+.city-information {
+	.ant-drawer-header {
+		border: 0 !important;
+	}
+
+	.ant-drawer-body {
+		padding-top: 0 !important;
+	}
+}
+
+.city-result-modal {
+
+	.container-cell {
+		min-width: 95%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		/*.close-button {
+		  position: absolute;
+		  right: -58vh;
+		  top: -34px;
+		  cursor: pointer;
+		}*/
+	}
+
+	.city-result-card {
+		min-height: 260px;
+		margin: 5px auto;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+
+		@include xs {
+			min-height: 420px;
+		}
+
+		@include sm {
+			min-height: 420px;
+		}
+
+		@include md {
+			min-height: 420px;
+		}
+
+		/*.services-icon {
+		  font-size: 60px;
+		}*/
+
+		&.weather-data {
+
+			.ant-card-body {
+				display: flex;
+				justify-content: center;
+				flex: 1;
+				/*padding: 20px !important*/
+			}
+
+			.weather-top {
+				display: flex;
+				flex: 1;
+				flex-direction: column;
+			}
+
+			.weather-chart {
+				flex: 3;
+				text-align: center;
+				/*border: 1px dashed #999;*/
+
+				#chart {
+					height: 200px;
+					top: -22px;
+				}
+			}
+
+			.weather-icon-text, .weather-big-temp {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				text-align: center;
+				height: 50%;
+			}
+
+			.weather-icon {
+				font-size: 2.7rem;
+			}
+
+			.weather-text {
+				font-size: .8rem;
+			}
+
+			.weather-big-temp {
+				font-size: 3.2rem;
+			}
+		}
+
+		&.poi-categories {
+
+			.poi-category {
+				border-radius: $borderRadius7;
+				overflow: hidden;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				margin: 0 5px;
+
+				img {
+					width: 100%;
+					position: absolute;
+					left: 0;
+					filter: blur(.7px);
+				}
+
+				.black-overlay {
+					background-color: rgba(0, 0, 0, .3);
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.poi-category-text {
+				/*position: absolute;
+				top: 12px;
+				left: 10px;*/
+				margin-top: 8px;
+				font-weight: bold;
+				z-index: 1;
+				color: $white;
+				text-shadow: $textShadowPoi;
+			}
+
+			.ant-card-body {
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+				min-height: 85px;
+				justify-content: center;
+
+				&::before {
+					filter: blur(1.3px);
+				}
+			}
+		}
+
+		&.car-rental, &.hotel {
+			cursor: pointer;
+			-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+			filter: grayscale(100%);
+
+			&:hover {
+				-webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+				filter: grayscale(0%);
+			}
+
+			img {
+				height: 135px;
+				margin-top: 15px;
+				position: relative;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			&.ant-card-body {
+				padding: 0 !important;
+				display: flex;
+			}
+		}
+
+		.absolute-text {
+			/*position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: rgba(0, 0, 0, 0.65);
+			padding: 5px 10px;
+			background-color: rgba($white, 0.6);
+			-webkit-border-radius: $borderRadius4;
+			-moz-border-radius: $borderRadius4;
+			border-radius: $borderRadius4;
+			z-index: 10;
+			width: 70%;*/
+			text-align: center;
+		}
+
+		/** TO-DO fix the coloured iconfont.cn issue that are doen't show **/
+		/*.warning-icon {
+		  font-size: 3rem;
+		}*/
+
+		.warning-info {
+			font-size: 14px;
+			vertical-align: middle;
+			margin-left: 5px;
+		}
+
+		.warning-img {
+			width: 60px;
+		}
+	}
+}
+
+.poi {
+	.col-vert-align {
+		display: flex;
+		flex-direction: column;
+		min-height: 200px;
+		justify-content: center;
+	}
+
+	.wrapper-rating {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.vert-divider {
+		height: 20px;
+		width: 1px;
+		background-color: rgba($gray-500, 0.3);
+		margin: 0 10px;
+	}
+
+	.total-rating-align {
+		display: flex;
+		align-items: center;
+		position: relative;
+		top: 3px;
+
+		.warning-info {
+			position: relative;
+			top: -1px;
+		}
+	}
+
+	.poi-image {
+		border-radius: $borderRadius4;
+		max-width: 200px;
+	}
+
+	/*.vert-align-ctr {
+		flex-wrap: wrap;
+	}*/
+}
+
+.layout-car-rentals, .layout-hotels {
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 100vw;
+	height: 91.3vh;
+
+	.sider-car-rentals, .sider-hotels {
+		padding: 2px 0 0 20px;
+
+		.form-item-car-rental {
+			width: 100%;
+		}
+
+		// Line height fix for left side filters
+		.ant-form-item-label {
+			line-height: 20px;
+		}
+
+		.delete-dynamic-field {
+			&:hover {
+				color: $text-red-500;
+			}
+		}
+	}
+
+	.content {
+		padding: 20px;
+
+		.hor-filter, .hor-filter-button {
+			min-width: 10rem;
+			color: rgba(0, 0, 0, 0.65) !important;
+			border-color: #d9d9d9 !important;
+
+			&.button-def-focused {
+				color: #40a9ff !important;
+				border-color: #40a9ff !important;
+
+				&:focus:not(:hover) {
+					color: #40a9ff !important;
+					border-color: #40a9ff !important;
+				}
+			}
+		}
+
+		.hor-filter-button {
+			min-width: auto !important;
+		}
+	}
+}
+
+/* CAR RENTAL - SINGLE ITEM
+   ============================= */
+
+.card-car-rental, .card-hotel {
+	margin: 6px 0 !important;
+	transition: none !important;
+
+	&.opened {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-top: -159px !important;
+		z-index: 10;
+		box-shadow: $shadowCardCarRental;
+		transition: none;
+	}
+
+	/*&.favorite-card {
+		background-color: rgba(253, 247, 247, 1);
+	}*/
+
+	.ant-card-body {
+		display: flex;
+		flex-direction: row;
+		/*padding: 15px;*/
+	}
+
+	.icon {
+		line-height: 28px;
+		font-size: 22px;
+		padding: 5px;
+	}
+
+	.inline {
+		display: flex;
+		flex-wrap: nowrap;
+		flex: 1;
+
+		/*&.features {
+			.icon {
+				line-height: 28px;
+				font-size: 22px;
+				padding: 5px;
+			}
+		}*/
+
+		&.title-fav-row {
+			justify-content: space-between;
+
+			.favorite-circle {
+				border-radius: 50%;
+				background-color: rgba($red, .1);
+			}
+
+			.favorite {
+				cursor: pointer;
+				line-height: 0;
+				font-size: 22px;
+				padding: 7px;
+				transition: .5s all;
+
+				&.active {
+					color: $red;
+				}
+			}
+		}
+
+		&.transmission-fuel-row {
+
+			.inline {
+				justify-content: center;
+			}
+		}
+	}
+
+	.images-price {
+		flex: 5;
+		padding: 10px;
+		/*min-width: 45%;*/
+		align-self: center;
+
+		.car-img {
+			width: 100%;
+			margin-bottom: 15px;
+		}
+
+		.brand-img img {
+			height: 35px;
+		}
+
+		.inline {
+			justify-content: space-between;
+
+			.price, .days-text {
+				color: $gray-700;
+			}
+
+			.include-text {
+				color: $gray-600;
+			}
+		}
+	}
+
+	.information {
+		flex: 5;
+		padding: 10px;
+		/*min-width: 55%;*/
+
+		.name {
+			width: 85%;
+		}
+
+		.ant-divider {
+			margin: 12px 0;
+		}
+
+		.more-data {
+			border-radius: $borderRadius4;
+			transition: .5s all;
+
+			&:hover {
+				background-color: $gray-200;
+			}
+		}
+
+		.more-data-icon {
+			display: flex;
+			justify-content: center;
+			font-size: 1.8rem;
+			cursor: pointer;
+			transition: .5s all;
+			padding: 0 0 9px;
+
+			&.up {
+				transform: rotate(180deg);
+			}
+		}
+
+		.features {
+			.inline {
+				flex-wrap: nowrap !important;
+			}
+		}
+	}
+}
+
+.card-hotel {
+	.images-price {
+		padding-top: 18px;
+		align-self: initial;
+
+		.car-img {
+			margin-top: 20px;
+		}
+	}
+
+	.inline {
+		&.rating-block {
+			justify-content: center;
+			width: 50%;
+			margin: auto;
+			height: 23px;
+			cursor: pointer;
+
+			.anticon {
+				margin: 0 5px;
+				color: $gray-600;
+			}
+		}
+	}
+}
+
+/* FAVORITES - FIXES
+   ============================= */
+
+.favorites {
+	.ant-row {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+}
+
+.favorite-city, .favorite-car-rental, .favorite-hotel, .poi-item {
+	margin: 0 5px !important;
+	box-shadow: $boxShadowFavCities;
+}
+
+.favorite-city, .favorite-hotel, .poi-item {
+	cursor: pointer;
+}
+
+.favorite-car-rental, .favorite-hotel {
+	&.expired {
+		.name,
+		.prices,
+		.more-details,
+		.img,
+		.period {
+			opacity: .5;
+		}
+	}
+
+	.period {
+		width: 70%;
+	}
+
+	.img {
+		/*max-width: 100%;*/
+		width: 100%;
+	}
+
+	.remove-favorite {
+		cursor: pointer;
+		color: rgba($red, .8);
+	}
+
+	.more-details {
+		cursor: pointer;
+		color: rgba($blue, .8);
+	}
+}
+
+.favorite-city {
+	.ant-card-body {
+		width: 100%;
+	}
+}
+
+.favorite-hotel {
+	.img {
+		width: 100%;
+		border-top-left-radius: $borderRadius4;
+		border-top-right-radius: $borderRadius4;
+	}
+
+	.inline.centered {
+		margin: 8px auto;
+	}
+}
+
+.truncate {
+	overflow: hidden;
+	min-width: 0;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-bottom: 10px;
+}
+
+.col-amenities {
+	display: flex !important;
+	align-items: baseline;
+
+	i.anticon {
+		font-size: 16px;
+		margin-right: 5px;
+	}
+}
+
+/* REGISTER & LOGIN FORM
+   ============================= */
+.login-register-card {
+	height: 75%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	.logo-img.login-register-page {
+		margin-bottom: 4rem;
+		max-width: 200px;
+	}
+
+	.login-register-row {
+		box-shadow: $shadowCardReviewCity;
+
+		.login-register-col {
+			height: 450px;
+		}
+
+		.login-register-image {
+			width: 100%;
+			height: 100%;
+			max-height: 450px;
+			border-top-left-radius: $borderRadius7;
+			border-bottom-left-radius: $borderRadius7;
+		}
+
+		.ant-card {
+			height: 450px;
+			width: 100%;
+			display: inline-flex;
+			align-items: center;
+			border-radius: 0 $borderRadius7 $borderRadius7 0;
+
+			.ant-card-body {
+				padding: 24px !important;
+				display: inline-flex;
+				flex-direction: column;
+				align-self: center;
+			}
+		}
+
+		.login-form .login-form-forgot {
+			float: right;
+		}
+	}
+}
+
+/* RIGHT DROPDOWN MENU
+   ============================= */
+
+.ant-dropdown-menu {
+	.anticon {
+		margin-right: 8px;
+		position: relative;
+		top: -1px;
+	}
+}
+
+/* CITY RESULTS DRAWER
+   ============================= */
+
+.ant-drawer-content-wrapper {
+	@include xs {
+		width: 100vw !important;
+	}
+
+	@include sm {
+		width: 100vw !important;
+	}
+
+	@include md {
+		width: 100vw !important;
+	}
+}
+
+/* ANIMATIONS (EXPERIMENTAL) - AND DESIGN ANIMATE
+	https://motion.ant.design/components/animate#components-animate-demo-remove
+   ============================= */
+
+/******************************/
+
+.hotel-internal-drawer {
+	.ant-descriptions-title {
+		border: 1px solid #E8E8E8;
+		width: 130px !important;
+		padding: 4px 10px;
+		border-bottom: 0;
+		border-radius: 5px 5px 0 0;
+		position: relative;
+		top: 3px;
+		z-index: -1;
+		background-color: #E8E8E8;
+		margin: 0 !important;
+	}
+
+	.ant-collapse-borderless > .ant-collapse-item {
+		border-bottom: none;
+	}
+
+	.ant-row {
+		&.bg-gray {
+			background-color: $gray-100;
+			border-radius: $borderRadius5;
+			padding: 5px;
+		}
+	}
+
+	.header-img {
+		max-width: 150px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+		background: #7b1fa2;
+		background: -moz-linear-gradient(top, #42105b 0%, #7b1fa2 100%);
+		background: -webkit-linear-gradient(top, #42105b 0%, #7b1fa2 100%);
+		background: -o-linear-gradient(top, #42105b 0%, #7b1fa2 100%);
+		background: linear-gradient(to bottom, #42105b 0%, #7b1fa2 100%);
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FF42105B',EndColorStr='#FF7B1FA2')";
+		display: block;
+		padding: 6px 10px;
+
+		img {
+			width: 100%;
+			border-radius: $borderRadius5;
+		}
+	}
+
+	.guest-reviews {
+		.red {
+			color: rgba($red, 0.8);
+		}
+		.orange {
+			color: rgba($orange, 0.8);
+		}
+		.green {
+			color: rgba($green, 0.8);
+		}
+	}
+
+	.element-selected {
+		border: 1px solid rgba($red, .7);
+	}
+
+	.hotel-carousel, .room-carousel {
+		.button-prev, .button-next {
+			position: absolute;
+			//top: calc(40vh - 40px);
+			top: 28vh;
+		}
+
+		.button-prev {
+			left: 20px;
+		}
+
+		.button-next {
+			right: 20px;
+		}
+
+		.dot-element {
+			width: 72px;
+			height: 72px;
+
+			&.no-border-padding {
+				border: none;
+				padding: 0;
+				margin: 5px;
+				border-radius: $borderRadius5;
+
+				/*&:first-child {
+					margin: 0 !important;
+				}*/
+			}
+		}
+
+		.carousel__image {
+			max-width: 100% !important;
+			max-height: 100% !important;
+			object-fit: contain !important;
+			border-radius: $borderRadius5;
+		}
+
+		.carousel__inner-slide,
+		.carousel__slide,
+		.carousel__slider-tray,
+		.carousel__slider-tray-wrapper,
+		.carousel__slider {
+			height: 60vh !important;
+		}
+
+		/*.room-item-wrapper {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+
+			.room-item {
+				position: absolute;
+				margin-top: 12px;
+				margin-left: -2px;
+			}
+		}*/
+	}
+
+	.room-carousel {
+		.button-prev, .button-next {
+			top: 45%;
+		}
+
+		.button-prev {
+			left: 5px;
+		}
+
+		.button-next {
+			right: 5px;
+		}
+
+		.carousel__inner-slide,
+		.carousel__slide,
+		.carousel__slider-tray,
+		.carousel__slider-tray-wrapper,
+		.carousel__slider {
+			height: 34vh !important;
+		}
+	}
+
+
+
+	.ant-modal {
+		top: 2vh;
+	}
+
+	.description {
+		p {
+			margin-bottom: 0;
+		}
+
+		strong {
+			font-weight: bolder;
+		}
+
+	}
+}
+
+.settings-img {
+	width: 100%;
+	height: auto;
+}
+
+.settings {
+	.settings-form-input {
+		width: 150px;
+	}
+}
+
+/*.music-player-wrapper {
+	display: flex;
+	position: fixed;
+	top: 0;
+	flex-direction: column;
+	width: 100vw;
+	padding: 3px 0;
+	background-color: $white;
+}*/
+
+.music-player {
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	right: 280px;
+	top: 20px;
+	padding: 4px 15px;
+	z-index: 10000;
+
+	/*
+	text-shadow: 0 1px 3px $gray-900;
+	text-align: center;
+	color: #fff;
+	box-shadow: $boxShadow3;
+	width: 50%;
+	min-width: 50%;
+	transform: translateX(50%);
+	background-color: rgba($blue, 0.2);
+	border: 1px solid rgba($blue, 0.2);*/
+
+	.player-icons {
+		color: rgba($blue, .8);
+	}
+
+	.ant-progress {
+		.ant-progress-bg {
+			height: 4px;
+		}
+	}
+
+	.music-player-bg {
+		background: url("../images/bg-music.png") no-repeat bottom right;
+		background-size: auto 90px;
+	}
+
+	.hidden {
+		display: none;
+	}
+}
