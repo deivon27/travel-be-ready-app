@@ -16,5 +16,9 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - npm install
           - npm run production
+<<<<<<< HEAD
           - git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
           
+=======
+          - git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
+>>>>>>> b88913a2885410676be26a4b5394474181d2f747
